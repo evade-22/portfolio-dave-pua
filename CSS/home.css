@@ -1,0 +1,140 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* HOME.HTML CSS */
+*{
+    font-family: 'Silkscreen', cursive;
+    color: white;
+}
+body{
+    background-image:url("../images/matrix.gif");
+    background-repeat: repeat;
+    margin: 0;
+}
+.black-bg-body{
+    background-color: black;
+    border-radius: 20px;
+    width: 98%;
+    margin: 30px auto 0 auto;
+    height: auto;
+}
+.navbar-brand{
+    color: white;
+}
+li.nav-item{
+    padding: 0 15px 0 15px;
+}
+a.nav-link{
+    color: white;
+    font-size: 20px;
+}
+a.nav-link:hover{
+    color: #22F621;
+}
+.introductory{
+    text-align: center;
+    margin-top: 200px;
+}
+.buttonStyle{
+    margin: 40px;
+}
+.a-about{
+    background-color: black;
+    border: 2px solid white;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+.a-about:hover{
+    color: #22F621;
+}
+/* PORTFOLIO.HTML TYPING ANIMATION */
+.anim-h1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* steps determines how fast letters appear */
+.anim-typewriter{
+    animation: typewriter 6s steps(50) 1s 1 normal both,
+    blinkTextCursor 500ms steps(50) infinite normal;
+}
+/* This part of the animation determines how far the typing is */
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 21em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rbga(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+/*END TYPING ANIMATION*/
+.main-content{
+    margin-top: 290px;
+    margin-bottom: 80px;
+    padding: 25px;
+}
+.grid-align{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    padding: 30px;
+}
+.content-link{
+    font-size: 24px;
+    padding: 5px;
+}
+.content-link a{
+    color: grey;
+    text-decoration: none;
+}
+.content-img img{
+    width: 350px;
+    height: 500px;
+}
+/* #about h1{
+    margin-left: 25px;
+} */
+#project{
+    /* border: 2px solid; */
+    padding: 25px;
+    margin-bottom: 50px;
+}
+#contact{
+    padding: 0 25px 30px 25px;
+    margin-bottom: 30px;
+}
+/* ICONS CONTACT */
+.social-icons{
+	text-align: center;
+	font-size: 50px;
+}
+.social-icons i{
+	margin: 0 7px;
+	cursor: pointer;
+}
+
+/* For mobile functionality */
+@media only screen and (max-width:550px) {
+    .introName{
+        overflow-wrap: break-word;
+        place-items: center;
+    }
+    .introductory h1, a{
+        font-size: 15px;
+    }
+    /* .main-content{
+        
+    } */
+    .content-img img{
+        width: 200px;
+        height: 200px;
+    }
+    .content-p{
+        font-size: 15px;
+        word-wrap: break-word;
+    }
+}

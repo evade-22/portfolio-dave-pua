@@ -1,0 +1,78 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+/* WELCOME-PAGE.HTML CSS */
+*{
+    font-family: 'Silkscreen', cursive;
+    color: white;
+}
+body{
+    background-image:url("../images/matrix.gif");
+    background-repeat: repeat;
+    margin: 0;
+}
+.home-background{
+    margin: 300px auto 0 auto;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+html{
+    min-height: 100%;
+    overflow: hidden;
+}
+/* border-right is the typing cursor you see */
+.anim-h1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.h3-enter{
+    font-size: 100px;
+    padding: 8px;
+}
+.ahref-enter{
+    text-decoration: none;
+    color: white;
+}
+.ahref-enter:hover{
+    color: #22F621;
+}
+/* PORTFOLIO.HTML TYPING ANIMATION */
+/* steps determines how fast letters appear */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+/* This part of the animation determines how far the typing is */
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 11.5em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rbga(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+/* For mobile functionality */
+@media only screen and (max-width:550px) {
+    .home-background{
+        margin: 300px auto 0 auto;
+        place-items: center;
+    }
+    .anim-h1, .h3-enter{
+        font-size: 20px;
+    }
+    .h3-enter{
+        font-size: 20px;
+        padding: 15px;
+    }
+    .ahref-enter:active{
+        color: #22F621;
+    }
+}
